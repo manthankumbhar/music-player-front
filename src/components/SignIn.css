@@ -11,12 +11,11 @@
   font-weight: 700;
 }
 
-.input {
+.input_signin {
   height: 3.2rem;
-  font-size: 100px;
 }
 
-.input::placeholder {
+.input_signin::placeholder {
   font-size: 1.2rem;
 }
 

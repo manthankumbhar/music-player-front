@@ -3,6 +3,7 @@ import axios from "axios";
 import React, { Component } from "react";
 import { Spinner } from "react-bootstrap";
 import { Redirect } from "react-router";
+import logo from "../Photos/logo.png";
 import "./SignUp.css";
 
 class SignUp extends Component {
@@ -47,6 +48,7 @@ class SignUp extends Component {
   render() {
     return (
       <div>
+        <img src={logo} alt="logo" />
         <form className="form-main">
           <div className="form-group col-sm-6 col-md-6 col-lg-4 mx-auto">
             <label className="label">Email address</label>
@@ -55,7 +57,7 @@ class SignUp extends Component {
               onChange={this.handleChange}
               type="email"
               name="email"
-              className="form-control form-control-lg input"
+              className="form-control form-control-lg input_signin"
               placeholder="Enter your email address..."
               required
             />
@@ -67,7 +69,7 @@ class SignUp extends Component {
               onChange={this.handleChange}
               type="password"
               name="password"
-              className="form-control form-control-lg input"
+              className="form-control form-control-lg input_signin"
               placeholder="Password"
               required
             />

@@ -2,6 +2,7 @@ import axios from "axios";
 import React, { Component } from "react";
 import { Spinner } from "react-bootstrap";
 import { Redirect } from "react-router";
+import logo from "../Photos/logo.png";
 import "./SignIn.css";
 
 class SignIn extends Component {
@@ -45,53 +46,56 @@ class SignIn extends Component {
 
   render() {
     return (
-      <form className="form-main">
-        <div className="form-group col-sm-6 col-md-6 col-lg-4 mx-auto">
-          <label className="label">Email address</label>
-          <input
-            value={this.state.email}
-            onChange={this.handleChange}
-            type="email"
-            name="email"
-            className="input form-control form-control-lg"
-            placeholder="Email"
-            required
-          />
-        </div>
-        <div className="form-group col-sm-6 col-md-6 col-lg-4 mx-auto">
-          <label className="label">Password</label>
-          <input
-            value={this.state.password}
-            onChange={this.handleChange}
-            type="password"
-            name="password"
-            className="input form-control form-control-lg"
-            placeholder="Password"
-            required
-          />
-        </div>
-        <div className="form-group col-sm-6 col-md-6 col-lg-4 mx-auto">
-          <button
-            className="col-sm-12 col-md-12 btn-in rounded"
-            onClick={this.handleSubmit}
-          >
-            Continue with email
-          </button>
-          <br />
-          <br />
-          <a href="/forgetpassword" className="a-tag_signin">
-            Forget password?
-          </a>
-          <a href="/signup" className="a-tag_new-user">
-            New user?
-          </a>
-        </div>
-        {this.state.userAuthenticated ? <Redirect to="/home" /> : null}
-        {localStorage.accessTokenSecret ? <Redirect to="/home" /> : null}
-        {this.state.loading ? (
-          <Spinner animation="border" className="spinner_signin" />
-        ) : null}
-      </form>
+      <div>
+        <img src={logo} alt="logo" />
+        <form className="form-main">
+          <div className="form-group col-sm-6 col-md-6 col-lg-4 mx-auto">
+            <label className="label">Email address</label>
+            <input
+              value={this.state.email}
+              onChange={this.handleChange}
+              type="email"
+              name="email"
+              className="input form-control form-control-lg"
+              placeholder="Email"
+              required
+            />
+          </div>
+          <div className="form-group col-sm-6 col-md-6 col-lg-4 mx-auto">
+            <label className="label">Password</label>
+            <input
+              value={this.state.password}
+              onChange={this.handleChange}
+              type="password"
+              name="password"
+              className="input form-control form-control-lg"
+              placeholder="Password"
+              required
+            />
+          </div>
+          <div className="form-group col-sm-6 col-md-6 col-lg-4 mx-auto">
+            <button
+              className="col-sm-12 col-md-12 btn-in rounded"
+              onClick={this.handleSubmit}
+            >
+              Continue with email
+            </button>
+            <br />
+            <br />
+            <a href="/forgetpassword" className="a-tag_signin">
+              Forget password?
+            </a>
+            <a href="/signup" className="a-tag_new-user">
+              New user?
+            </a>
+          </div>
+          {this.state.userAuthenticated ? <Redirect to="/home" /> : null}
+          {localStorage.accessTokenSecret ? <Redirect to="/home" /> : null}
+          {this.state.loading ? (
+            <Spinner animation="border" className="spinner_signin" />
+          ) : null}
+        </form>
+      </div>
     );
   }
 }

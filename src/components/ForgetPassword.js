@@ -3,6 +3,7 @@ import React from "react";
 import { Component } from "react";
 import { Spinner } from "react-bootstrap";
 import { Redirect } from "react-router";
+import logo from "../Photos/logo.png";
 import "./ForgetPassword.css";
 
 class ForgetPassword extends Component {
@@ -93,6 +94,7 @@ class ForgetPassword extends Component {
   render() {
     return (
       <div>
+        <img src={logo} alt="logo" />
         <h1 className="h1-tag_forget_password">ForgetPassword</h1>
         <form onSubmit={this.sendOTP}>
           <input
