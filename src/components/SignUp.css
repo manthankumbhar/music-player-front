@@ -1,0 +1,43 @@
+.form-main {
+  position: fixed;
+  top: 45%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 90%;
+}
+
+.label {
+  font-size: 1.2rem;
+  margin: 1rem 0;
+  font-weight: 700;
+}
+
+.input {
+  height: 3.2rem;
+  font-size: 1.5rem;
+}
+
+.btn-in {
+  background-color: #fdf5f2;
+  border: 1px solid #ccc;
+  height: 3.4rem;
+  font-size: 1.4rem;
+}
+
+.btn-in:hover {
+  background-color: #fcece9;
+}
+
+.a-tag_signup-redirect {
+  color: #404040;
+  cursor: pointer;
+  font-size: 1.3rem;
+}
+
+.a-tag_signup-redirect:hover {
+  color: #686868;
+}
+
+.spinner_signup {
+  position: absolute;
+}
