@@ -48,7 +48,7 @@ class SignIn extends Component {
     return (
       <div>
         <img src={logo} alt="logo" />
-        <form className="form-main">
+        <form className="form-main_signin" onSubmit={this.handleSubmit}>
           <div className="form-group col-sm-6 col-md-6 col-lg-4 mx-auto">
             <label className="label">Email address</label>
             <input
@@ -76,7 +76,7 @@ class SignIn extends Component {
           <div className="form-group col-sm-6 col-md-6 col-lg-4 mx-auto">
             <button
               className="col-sm-12 col-md-12 btn-in rounded"
-              onClick={this.handleSubmit}
+              type="submit"
             >
               Continue with email
             </button>
