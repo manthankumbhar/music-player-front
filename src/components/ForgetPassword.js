@@ -4,7 +4,7 @@ import { Component } from "react";
 import { Spinner } from "react-bootstrap";
 import { Redirect } from "react-router";
 import logo from "../Photos/logo.png";
-import "./ForgetPassword.css";
+import "./ForgetPassword.scss";
 
 class ForgetPassword extends Component {
   constructor() {
@@ -95,14 +95,14 @@ class ForgetPassword extends Component {
     return (
       <div>
         <img src={logo} alt="logo" />
-        <h1 className="h1-tag_forget_password">ForgetPassword</h1>
+        <h1 className="forget-password__header">ForgetPassword</h1>
         <form onSubmit={this.sendOTP}>
           <input
             value={this.state.email}
             onChange={this.handleChange}
             type="email"
             name="email"
-            className="input_forget_password"
+            className="forget-password__input"
             placeholder="Email id"
             required
           />
@@ -112,12 +112,12 @@ class ForgetPassword extends Component {
             type="tel"
             name="number"
             pattern="[0-9]{12}"
-            className="input_forget_password"
+            className="forget-password__input"
             placeholder="Country code followed by phone number"
             required
           />
           <br />
-          <button type="submit" className="btn btn-danger button">
+          <button type="submit" className="btn btn-danger forget-password__btn">
             send OTP
           </button>
         </form>
@@ -130,11 +130,14 @@ class ForgetPassword extends Component {
               type="number"
               name="otp"
               placeholder="otp"
-              className="input_forget_password"
+              className="forget-password__input"
               required
             />
             <br />
-            <button type="submit" className="btn btn-primary button">
+            <button
+              type="submit"
+              className="btn btn-primary forget-password__btn"
+            >
               Verify
             </button>
           </form>
@@ -148,17 +151,20 @@ class ForgetPassword extends Component {
               type="password"
               name="newPassword"
               placeholder="Enter a new password"
-              className="input_forget_password"
+              className="forget-password__input"
               required
             />
             <br />
-            <button type="submit" className="btn btn-primary button">
+            <button
+              type="submit"
+              className="btn btn-primary forget-password__btn"
+            >
               Confirm
             </button>
           </form>
         ) : null}
         {this.state.loading ? (
-          <Spinner animation="border" className="spinner_forgetPassword" />
+          <Spinner animation="border" className="forget-password__spinner" />
         ) : null}
         {this.state.done ? <Redirect to="/" /> : null}
       </div>

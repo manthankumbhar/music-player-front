@@ -1,9 +1,10 @@
 import React, { Component } from "react";
 import { Redirect } from "react-router";
-import "./Home.css";
+import "./Home.scss";
 import sprite from "../Photos/SVG/sprite.svg";
 import logo from "../Photos/logo.png";
 import { Link } from "react-router-dom";
+import HocLink from "../hoc/HocLink";
 
 class Home extends Component {
   constructor() {
@@ -23,38 +24,38 @@ class Home extends Component {
 
   render() {
     return (
-      <div className="content_main">
-        <nav className="sidebar">
-          <ul className="nav_ul">
-            <Link to="/" className="nav_logo_main">
-              <img src={logo} className="nav_logo" alt="logo" />
+      <div className="home">
+        <nav className="home__sidebar">
+          <ul className="home__sidebar--nav-ul">
+            <Link to="/">
+              <img src={logo} className="home__sidebar--nav-logo" alt="logo" />
             </Link>
-            <li className="nav_li">
-              <a className="li_item" href="/">
-                <svg className="nav_icon">
+            <li className="home__sidebar--nav-li">
+              <a className="home__sidebar--li-item" href="/">
+                <svg className="home__sidebar--nav-icon">
                   <use href={sprite + "#icon-home"} />
                 </svg>
                 Home
               </a>
             </li>
-            <li className="nav_li">
-              <a className="li_item" href="/">
-                <svg className="nav_icon">
+            <li className="home__sidebar--nav-li">
+              <a className="home__sidebar--li-item" href="/">
+                <svg className="home__sidebar--nav-icon">
                   <use href={sprite + "#icon-magnifying-glass"} />
                 </svg>
                 Search
               </a>
             </li>
-            <li className="nav_li">
-              <a className="li_item" href="/">
-                <svg className="nav_icon">
+            <li className="home__sidebar--nav-li">
+              <a className="home__sidebar--li-item" href="/">
+                <svg className="home__sidebar--nav-icon">
                   <use href={sprite + "#icon-map"} />
                 </svg>
                 Browse
               </a>
             </li>
           </ul>
-          <div className="nav_legal">
+          <div className="home__sidebar--legal">
             {" "}
             Developed by{" "}
             <a
@@ -69,10 +70,28 @@ class Home extends Component {
             All Rights Reserved
           </div>
         </nav>
-        <div className="content">
-          <button className="btn btn-warning button_home" onClick={this.logout}>
-            Logout
-          </button>
+        <div className="home__content">
+          <div className="home__content--item">
+            <HocLink src={logo} link="/" title="Test-1" />
+            <HocLink src={logo} link="/" title="Test-2" />
+            <HocLink src={logo} link="/" title="Test-3" />
+          </div>
+          <div className="home__content--item">
+            <HocLink src={logo} link="/" title="Test-4" />
+            <HocLink src={logo} link="/" title="Test-5" />
+            <HocLink src={logo} link="/" title="Test-6" />
+          </div>
+          <div className="home__content--item">
+            <HocLink src={logo} link="/" title="Test-7" />
+            <HocLink src={logo} link="/" title="Test-8" />
+            <HocLink src={logo} link="/" title="Test-9" />
+            <button
+              className="btn btn-warning home__content--btn"
+              onClick={this.logout}
+            >
+              Logout
+            </button>
+          </div>
         </div>
         {this.state.exit ? <Redirect to="/" /> : null}
       </div>

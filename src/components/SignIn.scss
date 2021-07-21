@@ -1,0 +1,59 @@
+.form-signin {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 90%;
+
+  &__label {
+    font-size: 1.2rem;
+    margin: 1rem 0;
+    font-weight: 700;
+  }
+
+  &__input {
+    height: 3.2rem;
+
+    &::placeholder {
+      font-size: 1.2rem;
+    }
+  }
+
+  &__btn {
+    background-color: #fdf5f2;
+    border: 1px solid #ccc;
+    height: 3.4rem;
+    font-size: 1.4rem;
+    margin-top: 2rem;
+
+    &:hover {
+      background-color: #fcece9;
+    }
+  }
+
+  &__forgot-password {
+    color: #404040;
+    cursor: pointer;
+    float: right;
+    font-size: 1.3rem;
+
+    &:hover {
+      color: #686868;
+    }
+  }
+
+  &__new-user {
+    color: #404040;
+    cursor: pointer;
+    float: left;
+    font-size: 1.3rem;
+
+    &:hover {
+      color: #686868;
+    }
+  }
+
+  &__spinner {
+    position: absolute;
+  }
+}

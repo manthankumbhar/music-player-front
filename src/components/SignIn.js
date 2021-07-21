@@ -2,8 +2,9 @@ import axios from "axios";
 import React, { Component } from "react";
 import { Spinner } from "react-bootstrap";
 import { Redirect } from "react-router";
+import { Link } from "react-router-dom";
 import logo from "../Photos/logo.png";
-import "./SignIn.css";
+import "./SignIn.scss";
 
 class SignIn extends Component {
   constructor() {
@@ -48,51 +49,51 @@ class SignIn extends Component {
     return (
       <div>
         <img src={logo} alt="logo" />
-        <form className="form-main_signin" onSubmit={this.handleSubmit}>
+        <form className="form-signin" onSubmit={this.handleSubmit}>
           <div className="form-group col-sm-6 col-md-6 col-lg-4 mx-auto">
-            <label className="label">Email address</label>
+            <label className="form-signin__label">Email address</label>
             <input
               value={this.state.email}
               onChange={this.handleChange}
               type="email"
               name="email"
-              className="input form-control form-control-lg"
+              className="form-signin__input form-control form-control-lg"
               placeholder="Email"
               required
             />
           </div>
           <div className="form-group col-sm-6 col-md-6 col-lg-4 mx-auto">
-            <label className="label">Password</label>
+            <label className="form-signin__label">Password</label>
             <input
               value={this.state.password}
               onChange={this.handleChange}
               type="password"
               name="password"
-              className="input form-control form-control-lg"
+              className="form-signin__input form-control form-control-lg"
               placeholder="Password"
               required
             />
           </div>
           <div className="form-group col-sm-6 col-md-6 col-lg-4 mx-auto">
             <button
-              className="col-sm-12 col-md-12 btn-in rounded"
+              className="col-sm-12 col-md-12 form-signin__btn rounded"
               type="submit"
             >
               Continue with email
             </button>
             <br />
             <br />
-            <a href="/forgetpassword" className="a-tag_signin">
+            <Link to="/forgetpassword" className="form-signin__forgot-password">
               Forget password?
-            </a>
-            <a href="/signup" className="a-tag_new-user">
+            </Link>
+            <Link to="/signup" className="form-signin__new-user">
               New user?
-            </a>
+            </Link>
           </div>
           {this.state.userAuthenticated ? <Redirect to="/home" /> : null}
           {localStorage.accessTokenSecret ? <Redirect to="/home" /> : null}
           {this.state.loading ? (
-            <Spinner animation="border" className="spinner_signin" />
+            <Spinner animation="border" className="form-signin__spinner" />
           ) : null}
         </form>
       </div>

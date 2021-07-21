@@ -2,8 +2,9 @@ import axios from "axios";
 import React, { Component } from "react";
 import { Spinner } from "react-bootstrap";
 import { Redirect } from "react-router";
+import { Link } from "react-router-dom";
 import logo from "../Photos/logo.png";
-import "./SignUp.css";
+import "./SignUp.scss";
 
 class SignUp extends Component {
   constructor() {
@@ -48,45 +49,45 @@ class SignUp extends Component {
     return (
       <div>
         <img src={logo} alt="logo" />
-        <form className="form-main_signup" onSubmit={this.handleSubmit}>
+        <form className="form-signup" onSubmit={this.handleSubmit}>
           <div className="form-group col-sm-6 col-md-6 col-lg-4 mx-auto">
-            <label className="label">Email address</label>
+            <label className="form-signup__label">Email address</label>
             <input
               value={this.state.email}
               onChange={this.handleChange}
               type="email"
               name="email"
-              className="form-control form-control-lg input_signin"
+              className="form-control form-control-lg form-signup__input"
               placeholder="Enter your email address..."
               required
             />
           </div>
           <div className="form-group col-sm-6 col-md-6 col-lg-4 mx-auto">
-            <label className="label">Password</label>
+            <label className="form-signup__label">Password</label>
             <input
               value={this.state.password}
               onChange={this.handleChange}
               type="password"
               name="password"
-              className="form-control form-control-lg input_signin"
+              className="form-control form-control-lg form-signup__input"
               placeholder="Password"
               required
             />
             <br />
             <button
-              className="col-sm-12 col-md-12 btn-in rounded"
+              className="col-sm-12 col-md-12 form-signup__btn rounded"
               type="submit"
             >
               Signup with email
             </button>
             <br />
             <br />
-            <a href="/" className="a-tag_signup-redirect">
+            <Link to="/" className="form-signup__old-user">
               Already a User?
-            </a>
+            </Link>
           </div>
           {this.state.loading ? (
-            <Spinner animation="border" className="spinner_signup" />
+            <Spinner animation="border" className="form-signup__spinner" />
           ) : null}
           {this.state.userAuthenticated ? <Redirect to="/home" /> : null}
           {localStorage.accessTokenSecret ? <Redirect to="/home" /> : null}
