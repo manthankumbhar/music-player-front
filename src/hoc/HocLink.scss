@@ -2,9 +2,12 @@
   position: relative;
 
   &__img {
-    width: 30rem;
-    height: 30rem;
+    width: 28rem;
+    height: 32rem;
+    padding: 2rem 2rem 5rem 2rem;
+    border-radius: 3%;
     // border: 1px solid #fff;
+    background-color: rgb(53, 88, 88);
     margin: 1.2rem 0;
     transition: all 0.2s;
     box-shadow: 0 1rem 3rem rgba(black, 0.15);
@@ -21,6 +24,7 @@
     font-weight: 600;
     font-size: 1.5rem;
     text-decoration: none;
+    display: block;
 
     position: absolute;
     top: 85%;

@@ -72,19 +72,19 @@ class Home extends Component {
         </nav>
         <div className="home__content">
           <div className="home__content--item">
-            <HocLink src={logo} link="/" title="Test-1" />
-            <HocLink src={logo} link="/" title="Test-2" />
-            <HocLink src={logo} link="/" title="Test-3" />
+            <HocLink src="https://picsum.photos/250" link="/" title="Test-1" />
+            <HocLink src="https://picsum.photos/251" link="/" title="Test-2" />
+            <HocLink src="https://picsum.photos/252" link="/" title="Test-3" />
           </div>
           <div className="home__content--item">
-            <HocLink src={logo} link="/" title="Test-4" />
-            <HocLink src={logo} link="/" title="Test-5" />
-            <HocLink src={logo} link="/" title="Test-6" />
+            <HocLink src="https://picsum.photos/253" link="/" title="Test-4" />
+            <HocLink src="https://picsum.photos/254" link="/" title="Test-5" />
+            <HocLink src="https://picsum.photos/255" link="/" title="Test-6" />
           </div>
           <div className="home__content--item">
-            <HocLink src={logo} link="/" title="Test-7" />
-            <HocLink src={logo} link="/" title="Test-8" />
-            <HocLink src={logo} link="/" title="Test-9" />
+            <HocLink src="https://picsum.photos/256" link="/" title="Test-7" />
+            <HocLink src="https://picsum.photos/257" link="/" title="Test-8" />
+            <HocLink src="https://picsum.photos/258" link="/" title="Test-9" />
             <button
               className="btn btn-warning home__content--btn"
               onClick={this.logout}
