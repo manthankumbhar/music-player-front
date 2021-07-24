@@ -1,10 +1,8 @@
 import React, { Component } from "react";
 import { Redirect } from "react-router";
 import "./Home.scss";
-import sprite from "../Photos/SVG/sprite.svg";
-import logo from "../Photos/logo.png";
-import { Link } from "react-router-dom";
 import HocLink from "../hoc/HocLink";
+import Sidebar from "./Sidebar";
 
 class Home extends Component {
   constructor() {
@@ -25,66 +23,59 @@ class Home extends Component {
   render() {
     return (
       <div className="home">
-        <nav className="home__sidebar">
-          <ul className="home__sidebar--nav-ul">
-            <Link to="/">
-              <img src={logo} className="home__sidebar--nav-logo" alt="logo" />
-            </Link>
-            <li className="home__sidebar--nav-li">
-              <a className="home__sidebar--li-item" href="/">
-                <svg className="home__sidebar--nav-icon">
-                  <use href={sprite + "#icon-home"} />
-                </svg>
-                Home
-              </a>
-            </li>
-            <li className="home__sidebar--nav-li">
-              <a className="home__sidebar--li-item" href="/">
-                <svg className="home__sidebar--nav-icon">
-                  <use href={sprite + "#icon-magnifying-glass"} />
-                </svg>
-                Search
-              </a>
-            </li>
-            <li className="home__sidebar--nav-li">
-              <a className="home__sidebar--li-item" href="/">
-                <svg className="home__sidebar--nav-icon">
-                  <use href={sprite + "#icon-map"} />
-                </svg>
-                Browse
-              </a>
-            </li>
-          </ul>
-          <div className="home__sidebar--legal">
-            {" "}
-            Developed by{" "}
-            <a
-              href="https://manthankumbhar.netlify.app"
-              target="_blank"
-              rel="noreferrer"
-            >
-              Manthan Kumbhar
-            </a>{" "}
-            &copy; {new Date().getFullYear()}
-            <br />
-            All Rights Reserved
-          </div>
-        </nav>
+        <Sidebar />
         <div className="home__content">
           <div className="home__content--item">
-            <HocLink src="https://picsum.photos/250" link="/" title="Test-1" />
-            <HocLink src="https://picsum.photos/251" link="/" title="Test-2" />
-            <HocLink src="https://picsum.photos/252" link="/" title="Test-3" />
+            <HocLink
+              src="https://picsum.photos/250"
+              link="/playlist/linkin-park"
+              title="Linkin Park"
+            />
+            <HocLink
+              src="https://picsum.photos/255"
+              link="/playlist/one-sirection"
+              title="One Direction"
+            />
+            <HocLink
+              src="https://picsum.photos/252"
+              link="/playlist/ye-jawani-hai-deewani"
+              title="Ye Jawani Hai Deewani"
+            />
           </div>
           <div className="home__content--item">
-            <HocLink src="https://picsum.photos/253" link="/" title="Test-4" />
-            <HocLink src="https://picsum.photos/254" link="/" title="Test-5" />
-            <HocLink src="https://picsum.photos/255" link="/" title="Test-6" />
+            <HocLink
+              src="https://picsum.photos/253"
+              link="/playlist/chainsmokers"
+              title="Chainsmokers"
+            />
+            <HocLink
+              src="https://picsum.photos/252"
+              link="/playlist/ac-dc"
+              title="AC/DC"
+            />
+            <HocLink
+              src="https://picsum.photos/251"
+              link="/playlist/charlie-puth"
+              title="Charlie Puth"
+            />
           </div>
           <div className="home__content--item">
-            <HocLink src="https://picsum.photos/256" link="/" title="Test-7" />
-            <HocLink src="https://picsum.photos/257" link="/" title="Test-8" />
-            <HocLink src="https://picsum.photos/258" link="/" title="Test-9" />
+            <HocLink
+              src="https://picsum.photos/258"
+              link="/playlist/hoobstank"
+              title="Hoobstank"
+            />
+            <HocLink
+              src="https://picsum.photos/256"
+              link="/playlist/selena-gomez"
+              title="Selena Gomez"
+            />
+            <HocLink
+              src="https://picsum.photos/257"
+              link="/playlist/hindi-songs"
+              title="Hindi Songs"
+            />
+
             <button
               className="btn btn-warning home__content--btn"
               onClick={this.logout}
