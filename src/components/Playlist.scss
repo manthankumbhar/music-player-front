@@ -1,3 +1,4 @@
+@import url("https://fonts.googleapis.com/css2?family=Otomanopee+One&display=swap");
 .playlist {
   height: 100vh;
   display: flex;
@@ -9,5 +10,30 @@
     display: flex;
     flex-direction: column;
     overflow-y: auto;
+  }
+
+  &__header {
+    margin: 2rem 3rem;
+    display: flex;
+    align-items: center;
+
+    &--img {
+      width: 15rem;
+      height: 15rem;
+      margin-right: 1rem;
+      border-radius: 1rem;
+    }
+
+    &--1 {
+      font-size: 5rem;
+      font-family: "Otomanopee One", sans-serif;
+      color: white;
+      text-transform: uppercase;
+      transition: all 0.2s;
+
+      &:hover {
+        color: grey;
+      }
+    }
   }
 }

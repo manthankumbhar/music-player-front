@@ -11,7 +11,14 @@ class Playlist extends Component {
       <div className="playlist">
         <Sidebar />
         <div className="playlist__content">
-          <h1>{headerText}</h1>
+          <div className="playlist__header">
+            <img
+              className="playlist__header--img"
+              src="https://picsum.photos/250"
+              alt="album img"
+            />
+            <h1 className="playlist__header--1">{headerText}</h1>
+          </div>
         </div>
       </div>
     );

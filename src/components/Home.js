@@ -33,7 +33,7 @@ class Home extends Component {
             />
             <HocLink
               src="https://picsum.photos/255"
-              link="/playlist/one-sirection"
+              link="/playlist/one-direction"
               title="One Direction"
             />
             <HocLink
