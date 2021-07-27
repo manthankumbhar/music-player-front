@@ -14,28 +14,28 @@ class Sidebar extends Component {
             <img src={logo} className="sidebar--nav-logo" alt="logo" />
           </Link>
           <li className="sidebar--nav-li">
-            <a className="sidebar--li-item" href="/home">
+            <Link className="sidebar--li-item" to="/home">
               <svg className="sidebar--nav-icon">
                 <use href={sprite + "#icon-home"} />
               </svg>
               Home
-            </a>
+            </Link>
           </li>
           <li className="sidebar--nav-li">
-            <a className="sidebar--li-item" href="/">
+            <Link className="sidebar--li-item" to="/home">
               <svg className="sidebar--nav-icon">
                 <use href={sprite + "#icon-magnifying-glass"} />
               </svg>
               Search
-            </a>
+            </Link>
           </li>
           <li className="sidebar--nav-li">
-            <a className="sidebar--li-item" href="/">
+            <Link className="sidebar--li-item" to="/home">
               <svg className="sidebar--nav-icon">
                 <use href={sprite + "#icon-map"} />
               </svg>
               Browse
-            </a>
+            </Link>
           </li>
         </ul>
         <div className="sidebar--legal">

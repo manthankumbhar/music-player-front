@@ -1,20 +1,24 @@
 .hoclink {
   position: relative;
-  margin: 0.8rem 0;
+  margin: 1rem 0;
+  transition: all 0.3s;
+
+  &:hover {
+    transform: translateY(-5px);
+  }
 
   &__img {
     width: 30rem;
     height: 33rem;
     padding: 2rem 2rem 5rem 2rem;
     border-radius: 3%;
+    box-shadow: 0 1rem 3rem rgba(black, 0.15);
     // border: 1px solid #fff;
     background-color: rgb(53, 88, 88);
     margin: 1.2rem 0;
-    transition: all 0.2s;
-    box-shadow: 0 1rem 3rem rgba(black, 0.15);
+    transition: all 0.3s;
 
     &:hover {
-      transform: translateY(-3px);
       box-shadow: 0 1rem 3rem rgba(white, 0.15);
     }
   }
