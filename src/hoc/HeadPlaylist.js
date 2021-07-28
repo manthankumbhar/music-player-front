@@ -1,8 +1,21 @@
-import React from "react";
+import React, { useState } from "react";
 import HocPlaylist from "./HocPlaylist";
 import "./HeadPlaylist.scss";
+import HocPlayer from "./HocPlayer";
+import axios from "axios";
 
 function HeadPlaylist(props) {
+  const [songurl, updateSongUrl] = useState("");
+
+  function SongCall(id) {
+    axios
+      .post(`https://monty-music-player.herokuapp.com/songs/${id}`)
+      .then((res) => {
+        var url = res.data["success"];
+        updateSongUrl(url);
+      });
+  }
+
   var url = document.URL;
   var lastIndex = url.substring(url.lastIndexOf("/") + 1);
   if (props.header === lastIndex) {
@@ -22,6 +35,10 @@ function HeadPlaylist(props) {
             name="Castle of Glass"
             src="https://picsum.photos/261"
             duration="3:25"
+            onClick={(e) => {
+              e.preventDefault();
+              SongCall("f9b385f8f55d4e71f5c87bca5dd7398c");
+            }}
           />
           <HocPlaylist
             header="linkin-park"
@@ -184,6 +201,10 @@ function HeadPlaylist(props) {
             name="Bheegi si Bhaagi si"
             src="https://picsum.photos/288"
             duration="4:56"
+            onClick={(e) => {
+              e.preventDefault();
+              SongCall("390caeea05abbe714dceef44fcb90f31");
+            }}
           />
           <HocPlaylist
             header="hindi-songs"
@@ -197,6 +218,9 @@ function HeadPlaylist(props) {
             src="https://picsum.photos/290"
             duration="6:26"
           />
+        </div>
+        <div className="audio-player">
+          <HocPlayer src={songurl} />
         </div>
       </div>
     );
