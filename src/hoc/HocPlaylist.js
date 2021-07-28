@@ -8,7 +8,7 @@ function HocPlaylist(props) {
   if (props.header === lastIndex) {
     return (
       <div className="hocplaylist">
-        <svg className="hocplaylist__svg">
+        <svg className="hocplaylist__svg" onClick={props.onClick}>
           <use href={sprite + "#icon-controller-play"} />
         </svg>
         <img src={props.src} alt="song img" className="hocplaylist__img" />
