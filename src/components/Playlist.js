@@ -3,6 +3,7 @@ import { Component } from "react";
 import Sidebar from "./Sidebar";
 import "./Playlist.scss";
 import HeadPlaylist from "../hoc/HeadPlaylist";
+import HocPlayer from "../hoc/HocPlayer";
 
 class Playlist extends Component {
   render() {
@@ -26,6 +27,7 @@ class Playlist extends Component {
           <HeadPlaylist header="charlie-puth" src="https://picsum.photos/307" />
           <HeadPlaylist header="hindi-songs" src="https://picsum.photos/308" />
         </div>
+        <HocPlayer />
       </div>
     );
   }

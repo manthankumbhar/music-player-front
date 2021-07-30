@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 import HocPlaylist from "./HocPlaylist";
 import "./HeadPlaylist.scss";
-import HocPlayer from "./HocPlayer";
 import axios from "axios";
 
 function HeadPlaylist(props) {
@@ -44,25 +43,31 @@ function HeadPlaylist(props) {
             header="linkin-park"
             name="In the End"
             src="https://picsum.photos/262"
-            duration="3:36"
+            duration="3:38"
+            onClick={(e) => {
+              e.preventDefault();
+              SongCall("96314db77c240acc52079281e773d788");
+            }}
           />
           <HocPlaylist
             header="linkin-park"
             name="What I've Done"
             src="https://picsum.photos/263"
             duration="3:25"
+            onClick={(e) => {
+              e.preventDefault();
+              SongCall("021fe2ed1239b0ac610c79350d9a0153");
+            }}
           />
           <HocPlaylist
             header="linkin-park"
             name="One more light"
             src="https://picsum.photos/264"
-            duration="4:15"
-          />
-          <HocPlaylist
-            header="linkin-park"
-            name="Numb"
-            src="https://picsum.photos/265"
-            duration="6:17"
+            duration="4:30"
+            onClick={(e) => {
+              e.preventDefault();
+              SongCall("3baf39c75b2efc0a02535124993752c8");
+            }}
           />
           <HocPlaylist
             header="chainsmokers"
@@ -81,12 +86,6 @@ function HeadPlaylist(props) {
             name="Call you mine"
             src="https://picsum.photos/268"
             duration="4:28"
-          />
-          <HocPlaylist
-            header="chainsmokers"
-            name="Something just like this"
-            src="https://picsum.photos/269"
-            duration="5:31"
           />
           <HocPlaylist
             header="hoobastank"
@@ -218,9 +217,6 @@ function HeadPlaylist(props) {
             src="https://picsum.photos/290"
             duration="6:26"
           />
-        </div>
-        <div className="audio-player">
-          <HocPlayer src={songurl} />
         </div>
       </div>
     );

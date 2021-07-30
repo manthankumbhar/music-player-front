@@ -1,6 +1,9 @@
 .headplaylist {
+  display: flex;
+  flex-direction: column;
+
   &__header {
-    margin: 2rem 3rem 4rem 3rem;
+    margin: 2rem 3rem 3rem 3rem;
     display: flex;
     align-items: center;
 
