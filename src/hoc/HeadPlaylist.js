@@ -5,6 +5,7 @@ import axios from "axios";
 
 function HeadPlaylist(props) {
   const [songurl, updateSongUrl] = useState("");
+  console.log(songurl);
 
   function SongCall(id) {
     axios
