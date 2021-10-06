@@ -3,7 +3,7 @@ import { Redirect } from "react-router";
 import "./Home.scss";
 import HocLink from "../hoc/HocLink";
 import Sidebar from "./Sidebar";
-import HocPlayer from "../hoc/HocPlayer";
+// import HocPlayer from "../hoc/HocPlayer";
 
 class Home extends Component {
   constructor() {
@@ -85,7 +85,7 @@ class Home extends Component {
             </button>
           </div>
         </div>
-        <HocPlayer />
+        {/* <HocPlayer /> */}
         {this.state.exit ? <Redirect to="/" /> : null}
       </div>
     );

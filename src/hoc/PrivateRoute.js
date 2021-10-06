@@ -1,11 +1,15 @@
 import React from "react";
 import { Route } from "react-router";
-import Playlist from "../components/Playlist";
 import Home from "../components/Home";
 import Error from "../UI/Error";
 import MainAuth from "./Auth";
 
-const PrivateRoute = ({ component: Component, page: Page, ...rest }) => (
+const PrivateRoute = ({
+  component: Component,
+  page: Page,
+  comp: Comp,
+  ...rest
+}) => (
   <Route
     {...rest}
     render={(props) =>
@@ -13,7 +17,7 @@ const PrivateRoute = ({ component: Component, page: Page, ...rest }) => (
         <Component {...props} />
       ) : localStorage.accessTokenSecret ? (
         localStorage.getItem("accessTokenSecret") && Page === "true" ? (
-          <Playlist />
+          { ...Comp }
         ) : (
           <Home />
         )

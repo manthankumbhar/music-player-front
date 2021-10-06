@@ -1,33 +1,30 @@
-import React, { useState } from "react";
+import React from "react";
 import HocPlaylist from "./HocPlaylist";
 import "./HeadPlaylist.scss";
 import axios from "axios";
 
-function HeadPlaylist(props) {
-  const [songurl, updateSongUrl] = useState("");
-  console.log(songurl);
-
+function HeadPlaylist({ childToParent, header, src }) {
   function SongCall(id) {
     axios
       .post(`https://monty-music-player.herokuapp.com/songs/${id}`)
       .then((res) => {
         var url = res.data["success"];
-        updateSongUrl(url);
+        childToParent(url);
       });
   }
 
   var url = document.URL;
   var lastIndex = url.substring(url.lastIndexOf("/") + 1);
-  if (props.header === lastIndex) {
+  if (header === lastIndex) {
     return (
       <div className="headplaylist">
         <div className="headplaylist__header">
           <img
             className="headplaylist__header--img"
-            src={props.src}
+            src={src}
             alt="album img"
           />
-          <h1 className="headplaylist__header--1">{props.header}</h1>
+          <h1 className="headplaylist__header--1">{header}</h1>
         </div>
         <div className="headplaylist__songs">
           <HocPlaylist
