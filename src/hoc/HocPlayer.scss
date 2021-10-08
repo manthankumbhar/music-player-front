@@ -1,8 +1,8 @@
 .hocplayer {
-  position: fixed;
-  bottom: -1.5rem;
-
   &__player {
+    position: fixed;
+    left: 0;
+    bottom: 0;
     width: 100vw;
     background-color: rgba(0, 0, 0, 0.932);
   }

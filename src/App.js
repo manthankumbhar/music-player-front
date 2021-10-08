@@ -15,6 +15,7 @@ function App() {
 
   const parentToChild = (childData) => {
     updateSong(childData);
+    console.log(`pass 2: ${song}`);
   };
 
   return (
