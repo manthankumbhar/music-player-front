@@ -1,7 +1,7 @@
 import React from "react";
 import { Route } from "react-router";
-import Home from "../components/Home";
-import Error from "../UI/Error";
+import Home from "../components/Home/Home";
+import Error from "../UI/Error/Error";
 import MainAuth from "./Auth";
 
 const PrivateRoute = ({

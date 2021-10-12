@@ -1,5 +1,5 @@
 import React from "react";
-import HocPlaylist from "./HocPlaylist";
+import HocPlaylist from "../../hoc/HocPlaylist/HocPlaylist";
 import "./HeadPlaylist.scss";
 import axios from "axios";
 

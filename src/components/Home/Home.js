@@ -1,8 +1,8 @@
 import React, { Component } from "react";
 import { Redirect } from "react-router";
 import "./Home.scss";
-import HocLink from "../hoc/HocLink";
-import Sidebar from "./Sidebar";
+import HocLink from "../../hoc/HocLink/HocLink";
+import Sidebar from "../Sidebar/Sidebar";
 // import HocPlayer from "../hoc/HocPlayer";
 
 class Home extends Component {

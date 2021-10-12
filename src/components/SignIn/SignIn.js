@@ -3,7 +3,7 @@ import React, { Component } from "react";
 import { Spinner } from "react-bootstrap";
 import { Redirect } from "react-router";
 import { Link } from "react-router-dom";
-import logo from "../Photos/logo.png";
+import logo from "../../Photos/logo.png";
 import "./SignIn.scss";
 
 class SignIn extends Component {

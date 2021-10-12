@@ -1,7 +1,7 @@
 import React from "react";
 import { Component } from "react";
-import sprite from "../Photos/SVG/sprite.svg";
-import logo from "../Photos/logo.png";
+import sprite from "../../Photos/SVG/sprite.svg";
+import logo from "../../Photos/logo.png";
 import { Link } from "react-router-dom";
 import "./Sidebar.scss";
 

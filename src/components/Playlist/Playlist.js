@@ -1,7 +1,7 @@
 import React from "react";
-import Sidebar from "./Sidebar";
+import Sidebar from "../Sidebar/Sidebar";
 import "./Playlist.scss";
-import HeadPlaylist from "../hoc/HeadPlaylist";
+import HeadPlaylist from "../../hoc/HeadPlaylist/HeadPlaylist";
 
 const Playlist = ({ parentToChild }) => {
   const childToParent = (childData) => {

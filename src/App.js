@@ -1,14 +1,14 @@
 import React, { useState } from "react";
 import { Switch, Route } from "react-router";
 import "./App.scss";
-import Home from "./components/Home";
-import SignIn from "./components/SignIn";
-import SignUp from "./components/SignUp";
-import Error from "./UI/Error";
+import Home from "./components/Home/Home";
+import SignIn from "./components/SignIn/SignIn";
+import SignUp from "./components/SignUp/SignUp";
+import Error from "./UI/Error/Error";
 import PrivateRoute from "./hoc/PrivateRoute";
-import ForgetPassword from "./components/ForgetPassword";
-import Playlist from "./components/Playlist";
-import HocPlayer from "./hoc/HocPlayer";
+import ForgetPassword from "./components/ForgetPassword/ForgetPassword";
+import Playlist from "./components/Playlist/Playlist";
+import HocPlayer from "./hoc/HocPlayer/HocPlayer";
 
 function App() {
   const [song, updateSong] = useState("");

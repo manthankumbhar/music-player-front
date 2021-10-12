@@ -1,6 +1,6 @@
 import React from "react";
 import "./HocPlaylist.scss";
-import sprite from "../Photos/SVG/sprite.svg";
+import sprite from "../../Photos/SVG/sprite.svg";
 
 function HocPlaylist(props) {
   var url = document.URL;

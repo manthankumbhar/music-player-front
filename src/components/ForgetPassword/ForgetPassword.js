@@ -3,7 +3,7 @@ import React from "react";
 import { Component } from "react";
 import { Spinner } from "react-bootstrap";
 import { Redirect } from "react-router";
-import logo from "../Photos/logo.png";
+import logo from "../../Photos/logo.png";
 import "./ForgetPassword.scss";
 
 class ForgetPassword extends Component {
