@@ -9,6 +9,8 @@ import PrivateRoute from "./hoc/PrivateRoute";
 import ForgetPassword from "./components/ForgetPassword/ForgetPassword";
 import Playlist from "./components/Playlist/Playlist";
 import HocPlayer from "./hoc/HocPlayer/HocPlayer";
+import Search from "./components/Search/Search";
+import Browse from "./components/Browse/Browse";
 
 function App() {
   const [song, updateSong] = useState("");
@@ -31,6 +33,14 @@ function App() {
           <Route path="/forgetpassword" component={ForgetPassword} />
           <PrivateRoute component={Playlist} path="/playlist" page="true">
             <Playlist parentToChild={parentToChild} />
+            <HocPlayer src={song} />
+          </PrivateRoute>
+          <PrivateRoute path="/search" component={Search}>
+            <Search childToParent={parentToChild} />
+            <HocPlayer src={song} />
+          </PrivateRoute>
+          <PrivateRoute path="/browse" component={Browse}>
+            <Browse childToParent={parentToChild} />
             <HocPlayer src={song} />
           </PrivateRoute>
           <Route path="*" component={Error} />

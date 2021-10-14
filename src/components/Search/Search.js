@@ -1,9 +1,18 @@
 import React from "react";
+import Sidebar from "../Sidebar/Sidebar";
+import "./Search.scss";
+import SearchInput from "react-search-input";
 import HocPlaylist from "../../hoc/HocPlaylist/HocPlaylist";
-import "./HeadPlaylist.scss";
 import axios from "axios";
 
-function HeadPlaylist({ childToParent, header, src }) {
+const Search = ({ childToParent }) => {
+  //   const [searchTerm, setSearchTerm] = useState("");
+  //   console.log(searchTerm);
+
+  //   const updatedSearch = (term) => {
+  // setSearchTerm(term);
+  //   };
+
   function SongCall(id) {
     axios
       .post(`https://monty-music-player.herokuapp.com/songs/${id}`)
@@ -13,22 +22,20 @@ function HeadPlaylist({ childToParent, header, src }) {
       });
   }
 
-  var url = document.URL;
-  var lastIndex = url.substring(url.lastIndexOf("/") + 1);
-  if (header === lastIndex) {
-    return (
-      <div className="headplaylist">
-        <div className="headplaylist__header">
-          <img
-            className="headplaylist__header--img"
-            src={src}
-            alt="album img"
+  return (
+    <div className="search">
+      <Sidebar />
+      <div className="search__content">
+        <div className="search__header">
+          <h1 className="search__header--h1">Search Songs</h1>
+          <SearchInput
+            className="search__header--input search-input"
+            // onChange={updatedSearch}
           />
-          <h1 className="headplaylist__header--1">{header}</h1>
         </div>
-        <div className="headplaylist__songs">
+        <div>
           <HocPlaylist
-            header="linkin-park"
+            header="search"
             name="Castle of Glass"
             src="https://picsum.photos/261"
             duration="3:25"
@@ -38,7 +45,7 @@ function HeadPlaylist({ childToParent, header, src }) {
             }}
           />
           <HocPlaylist
-            header="linkin-park"
+            header="search"
             name="In the End"
             src="https://picsum.photos/262"
             duration="3:38"
@@ -48,7 +55,7 @@ function HeadPlaylist({ childToParent, header, src }) {
             }}
           />
           <HocPlaylist
-            header="linkin-park"
+            header="search"
             name="What I've Done"
             src="https://picsum.photos/263"
             duration="3:25"
@@ -58,7 +65,7 @@ function HeadPlaylist({ childToParent, header, src }) {
             }}
           />
           <HocPlaylist
-            header="linkin-park"
+            header="search"
             name="One more light"
             src="https://picsum.photos/264"
             duration="4:30"
@@ -68,7 +75,7 @@ function HeadPlaylist({ childToParent, header, src }) {
             }}
           />
           <HocPlaylist
-            header="chainsmokers"
+            header="search"
             name="Closer"
             src="https://picsum.photos/266"
             duration="4:21"
@@ -78,7 +85,7 @@ function HeadPlaylist({ childToParent, header, src }) {
             }}
           />
           <HocPlaylist
-            header="chainsmokers"
+            header="search"
             name="Don't let me down"
             src="https://picsum.photos/267"
             duration="3:37"
@@ -88,7 +95,7 @@ function HeadPlaylist({ childToParent, header, src }) {
             }}
           />
           <HocPlaylist
-            header="chainsmokers"
+            header="search"
             name="Call you mine"
             src="https://picsum.photos/268"
             duration="3:37"
@@ -98,7 +105,7 @@ function HeadPlaylist({ childToParent, header, src }) {
             }}
           />
           <HocPlaylist
-            header="hoobastank"
+            header="search"
             name="The Reason"
             src="https://picsum.photos/270"
             duration="4:10"
@@ -108,7 +115,7 @@ function HeadPlaylist({ childToParent, header, src }) {
             }}
           />
           <HocPlaylist
-            header="hoobastank"
+            header="search"
             name="Out of Control"
             src="https://picsum.photos/271"
             duration="2:44"
@@ -118,7 +125,7 @@ function HeadPlaylist({ childToParent, header, src }) {
             }}
           />
           <HocPlaylist
-            header="hoobastank"
+            header="search"
             name="Same Direction"
             src="https://picsum.photos/272"
             duration="3:19"
@@ -128,7 +135,7 @@ function HeadPlaylist({ childToParent, header, src }) {
             }}
           />
           <HocPlaylist
-            header="one-direction"
+            header="search"
             name="What makes you Beautiful"
             src="https://picsum.photos/273"
             duration="3:26"
@@ -138,7 +145,7 @@ function HeadPlaylist({ childToParent, header, src }) {
             }}
           />
           <HocPlaylist
-            header="one-direction"
+            header="search"
             name="Night Changes"
             src="https://picsum.photos/274"
             duration="4:00"
@@ -148,7 +155,7 @@ function HeadPlaylist({ childToParent, header, src }) {
             }}
           />
           <HocPlaylist
-            header="one-direction"
+            header="search"
             name="Best Song Ever"
             src="https://picsum.photos/275"
             duration="3:18"
@@ -158,7 +165,7 @@ function HeadPlaylist({ childToParent, header, src }) {
             }}
           />
           <HocPlaylist
-            header="ac-dc"
+            header="search"
             name="Highway to Hell"
             src="https://picsum.photos/276"
             duration="3:27"
@@ -168,7 +175,7 @@ function HeadPlaylist({ childToParent, header, src }) {
             }}
           />
           <HocPlaylist
-            header="ac-dc"
+            header="search"
             name="Back in Black"
             src="https://picsum.photos/277"
             duration="4:13"
@@ -178,7 +185,7 @@ function HeadPlaylist({ childToParent, header, src }) {
             }}
           />
           <HocPlaylist
-            header="ac-dc"
+            header="search"
             name="Thunderstruck"
             src="https://picsum.photos/278"
             duration="4:53"
@@ -188,7 +195,7 @@ function HeadPlaylist({ childToParent, header, src }) {
             }}
           />
           <HocPlaylist
-            header="avicii"
+            header="search"
             name="The Nights"
             src="https://picsum.photos/279"
             duration="3:10"
@@ -198,7 +205,7 @@ function HeadPlaylist({ childToParent, header, src }) {
             }}
           />
           <HocPlaylist
-            header="avicii"
+            header="search"
             name="Wake Me Up"
             src="https://picsum.photos/280"
             duration="4:32"
@@ -208,7 +215,7 @@ function HeadPlaylist({ childToParent, header, src }) {
             }}
           />
           <HocPlaylist
-            header="avicii"
+            header="search"
             name="Waiting for Love"
             src="https://picsum.photos/281"
             duration="3:50"
@@ -218,7 +225,7 @@ function HeadPlaylist({ childToParent, header, src }) {
             }}
           />
           <HocPlaylist
-            header="ye-jawani-hai-deewani"
+            header="search"
             name="Ilahi"
             src="https://picsum.photos/282"
             duration="3:23"
@@ -228,7 +235,7 @@ function HeadPlaylist({ childToParent, header, src }) {
             }}
           />
           <HocPlaylist
-            header="ye-jawani-hai-deewani"
+            header="search"
             name="Kabira"
             src="https://picsum.photos/283"
             duration="4:11"
@@ -238,7 +245,7 @@ function HeadPlaylist({ childToParent, header, src }) {
             }}
           />
           <HocPlaylist
-            header="ye-jawani-hai-deewani"
+            header="search"
             name="Balam Pichkari"
             src="https://picsum.photos/284"
             duration="4:19"
@@ -248,7 +255,7 @@ function HeadPlaylist({ childToParent, header, src }) {
             }}
           />
           <HocPlaylist
-            header="charlie-puth"
+            header="search"
             name="We don't talk anymore"
             src="https://picsum.photos/285"
             duration="3:50"
@@ -258,7 +265,7 @@ function HeadPlaylist({ childToParent, header, src }) {
             }}
           />
           <HocPlaylist
-            header="charlie-puth"
+            header="search"
             name="See You Again"
             src="https://picsum.photos/286"
             duration="3:57"
@@ -268,7 +275,7 @@ function HeadPlaylist({ childToParent, header, src }) {
             }}
           />
           <HocPlaylist
-            header="charlie-puth"
+            header="search"
             name="One Call Away"
             src="https://picsum.photos/287"
             duration="4:01"
@@ -278,7 +285,7 @@ function HeadPlaylist({ childToParent, header, src }) {
             }}
           />
           <HocPlaylist
-            header="hindi-songs"
+            header="search"
             name="Bheegi si Bhaagi si"
             src="https://picsum.photos/288"
             duration="4:17"
@@ -288,7 +295,7 @@ function HeadPlaylist({ childToParent, header, src }) {
             }}
           />
           <HocPlaylist
-            header="hindi-songs"
+            header="search"
             name="Ijazat"
             src="https://picsum.photos/289"
             duration="4:41"
@@ -298,7 +305,7 @@ function HeadPlaylist({ childToParent, header, src }) {
             }}
           />
           <HocPlaylist
-            header="hindi-songs"
+            header="search"
             name="Ek main aur Ekk tu"
             src="https://picsum.photos/290"
             duration="4:38"
@@ -309,10 +316,8 @@ function HeadPlaylist({ childToParent, header, src }) {
           />
         </div>
       </div>
-    );
-  } else {
-    return null;
-  }
-}
+    </div>
+  );
+};
 
-export default HeadPlaylist;
+export default Search;

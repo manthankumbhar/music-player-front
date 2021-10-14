@@ -32,10 +32,6 @@
     &:hover {
       color: white;
     }
-
-    &:active {
-      color: white;
-    }
   }
 
   a {
@@ -60,4 +56,8 @@
     font-size: 1rem;
     margin-bottom: 0.5rem;
   }
+}
+
+.active {
+  color: white;
 }

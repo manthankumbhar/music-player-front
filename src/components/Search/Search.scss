@@ -1,0 +1,78 @@
+.search {
+  height: 100vh;
+  display: flex;
+
+  &__content {
+    background-color: darkslategray;
+    height: 88vh;
+
+    display: flex;
+    flex-direction: column;
+    overflow-y: auto;
+    flex: 1;
+  }
+
+  &__header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-right: 2rem;
+
+    &--h1 {
+      margin: 1rem 2rem;
+      font-size: 5rem;
+      font-family: "Otomanopee One", sans-serif;
+      color: white;
+      text-transform: uppercase;
+      transition: all 0.2s;
+      text-align: left;
+    }
+
+    &--input {
+      font-size: 1.5rem;
+      text-align: left;
+      margin: 1rem;
+    }
+  }
+
+  .search-input {
+    padding: 1rem;
+    height: 6rem;
+
+    position: relative;
+  }
+
+  .search-input::before {
+    content: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAA8AAAAPCAYAAAA71pVKAAAAAXNSR0IArs4c6QAAAQJJREFUKBWVkr2uQUEUhf3ET6GRaC5aFRoJKrf1BKpb8SwqovYGXkCj00k0QnRKEYkILYobvpUYmeMMyVnJl7P3mjN7Zu9zwiGv2qRFyMMSRrAFp6JPN8XzBj+wgDkUYAg7WINTYdwpDECxrRLJHeq2accdkgm8bzTvNAg2EDOGeUYI1KNO1gkuzTA1g8T7ojbn4ONQWPuHPWgeHmnzCqoe15tkSNPgPEAn68oVcOmA2XMtGK9FoE/VhOTTVNExqLCGZnxCv2pYauEC6lF0oQxX6IOvb7yX9NPEQafan+aPXDdQC18LsO6Tip5BBY6gIQaSbnMCFRCBZRcIvFkbsvCr4AFGOCxQy+JdGQAAAABJRU5ErkJggg==");
+    display: block;
+    position: absolute;
+    width: 1.5rem;
+    z-index: 3;
+    height: 1.5rem;
+    font-size: 2rem;
+    top: 1.5rem;
+    left: 2.5rem;
+    line-height: 3.2rem;
+    opacity: 0.6;
+  }
+
+  .search-input > input {
+    position: relative;
+    background-color: #eee;
+
+    width: 100%;
+    font-size: 1.6rem;
+    line-height: 2.2rem;
+    padding: 1rem 1rem 1rem 4rem;
+    height: 4rem;
+
+    border: none;
+    border-radius: 2rem;
+
+    transition: all 0.2s;
+  }
+
+  .search-input > input:focus {
+    outline: none;
+  }
+}
