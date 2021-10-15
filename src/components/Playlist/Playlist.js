@@ -6,7 +6,6 @@ import HeadPlaylist from "../../hoc/HeadPlaylist/HeadPlaylist";
 const Playlist = ({ parentToChild }) => {
   const childToParent = (childData) => {
     parentToChild(childData);
-    console.log(`pass 1: ${childData}`);
   };
 
   return (

@@ -7,18 +7,6 @@ import "./Sidebar.scss";
 export default function Sidebar() {
   var url = document.URL;
   var lastIndex = url.substring(url.lastIndexOf("/") + 1);
-  var arr = [
-    "home",
-    "linkin-park",
-    "chainsmokers",
-    "hoobastank",
-    "one-direction",
-    "ac-dc",
-    "avicii",
-    "ye-jawani-hai-deewani",
-    "charlie-puth",
-    "hindi-songs",
-  ];
   return (
     <nav className="sidebar">
       <ul className="sidebar--nav-ul">
@@ -28,7 +16,7 @@ export default function Sidebar() {
         <li className="sidebar--nav-li">
           <Link
             className={
-              arr.includes(lastIndex)
+              lastIndex === "home"
                 ? "sidebar--li-item active"
                 : "sidebar--li-item"
             }
