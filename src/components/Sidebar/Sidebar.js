@@ -10,8 +10,8 @@ export default function Sidebar() {
   return (
     <nav className="sidebar">
       <ul className="sidebar--nav-ul">
-        <Link to="/home">
-          <img src={logo} className="sidebar--nav-logo" alt="logo" />
+        <Link to="/home" className="sidebar--nav-logo">
+          <img src={logo} className="sidebar--nav-logo-icon" alt="logo" />
         </Link>
         <li className="sidebar--nav-li">
           <Link
