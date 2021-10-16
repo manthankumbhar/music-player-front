@@ -43,7 +43,7 @@ const Search = ({ childToParent }) => {
     {
       id: "390caeea05abbe714dceef44fcb90f31",
       name: "Bheegi si Bhaagi si",
-      src: "https://picsum.photos/278",
+      src: "https://picsum.photos/279",
       duration: "4:17",
     },
     {

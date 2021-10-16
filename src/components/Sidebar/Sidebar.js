@@ -5,6 +5,11 @@ import { Link } from "react-router-dom";
 import "./Sidebar.scss";
 
 export default function Sidebar() {
+  function logout() {
+    // e.preventDefault();
+    localStorage.removeItem("accessTokenSecret");
+    localStorage.removeItem("userEmail");
+  }
   var url = document.URL;
   var lastIndex = url.substring(url.lastIndexOf("/") + 1);
   return (
@@ -56,6 +61,14 @@ export default function Sidebar() {
               <use href={sprite + "#icon-map"} />
             </svg>
             Browse
+          </Link>
+        </li>
+        <li className="sidebar--nav-li">
+          <Link className="sidebar--li-item" to="/" onClick={logout()}>
+            <svg className="sidebar--nav-icon">
+              <use href={sprite + "#icon-log-out"} />
+            </svg>
+            Logout
           </Link>
         </li>
       </ul>
