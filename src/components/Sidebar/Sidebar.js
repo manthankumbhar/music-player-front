@@ -1,15 +1,19 @@
-import React from "react";
+import React, { useState } from "react";
 import sprite from "../../Photos/SVG/sprite.svg";
 import logo from "../../Photos/logo.png";
-import { Link } from "react-router-dom";
+import { Link, Redirect } from "react-router-dom";
 import "./Sidebar.scss";
 
 export default function Sidebar() {
-  function logout() {
-    // e.preventDefault();
+  const [Logout, setLogout] = useState(false);
+
+  function logout(e) {
+    e.preventDefault();
     localStorage.removeItem("accessTokenSecret");
     localStorage.removeItem("userEmail");
+    setLogout(true);
   }
+
   var url = document.URL;
   var lastIndex = url.substring(url.lastIndexOf("/") + 1);
   return (
@@ -64,7 +68,7 @@ export default function Sidebar() {
           </Link>
         </li>
         <li className="sidebar--nav-li">
-          <Link className="sidebar--li-item" to="/" onClick={logout()}>
+          <Link className="sidebar--li-item" to="/" onClick={logout}>
             <svg className="sidebar--nav-icon">
               <use href={sprite + "#icon-log-out"} />
             </svg>
@@ -86,6 +90,7 @@ export default function Sidebar() {
         <br />
         All Rights Reserved
       </div>
+      {Logout === true ? <Redirect to="/" /> : null}
     </nav>
   );
 }

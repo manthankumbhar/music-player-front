@@ -1,15 +1,13 @@
-import React, { Component } from "react";
+import React from "react";
 import "./Error.scss";
+import logo from "../../Photos/logo.png";
 
-class Error extends Component {
-  render() {
-    return (
-      <div>
-        <h1 className="h1-tag_error">4🐑4</h1>
-        <h2 className="h2-tag_error">Page Not Found</h2>
-      </div>
-    );
-  }
+export default function Error() {
+  return (
+    <div>
+      <img src={logo} alt="logo" />
+      <h1 className="h1-tag_error">4🐑4</h1>
+      <h2 className="h2-tag_error">Page Not Found</h2>
+    </div>
+  );
 }
-
-export default Error;

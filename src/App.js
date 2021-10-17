@@ -8,7 +8,6 @@ import Error from "./UI/Error/Error";
 import PrivateRoute from "./hoc/PrivateRoute";
 import ForgetPassword from "./components/ForgetPassword/ForgetPassword";
 import Playlist from "./components/Playlist/Playlist";
-import HocPlayer from "./hoc/HocPlayer/HocPlayer";
 import Search from "./components/Search/Search";
 import Browse from "./components/Browse/Browse";
 
@@ -20,31 +19,35 @@ function App() {
   };
 
   return (
-    <div>
-      <div className="App">
-        <Switch>
-          <Route exact path="/" component={SignIn} />
-          <Route path="/signup" component={SignUp} />
-          <PrivateRoute path="/home" page="false">
-            <Home />
-            <HocPlayer src={song} />
-          </PrivateRoute>
-          <Route path="/forgetpassword" component={ForgetPassword} />
-          <PrivateRoute component={Playlist} path="/playlist" page="true">
-            <Playlist parentToChild={parentToChild} />
-            <HocPlayer src={song} />
-          </PrivateRoute>
-          <PrivateRoute path="/search" component={Search}>
-            <Search childToParent={parentToChild} />
-            <HocPlayer src={song} />
-          </PrivateRoute>
-          <PrivateRoute path="/browse" component={Browse}>
-            <Browse childToParent={parentToChild} />
-            <HocPlayer src={song} />
-          </PrivateRoute>
-          <Route path="*" component={Error} />
-        </Switch>
-      </div>
+    <div className="App">
+      <Switch>
+        <Route exact path="/" component={SignIn} />
+        <Route path="/signup" component={SignUp} />
+        <Route path="/forgetpassword" component={ForgetPassword} />
+        <PrivateRoute path="/home" page="false" component={Home} src={song} />
+        <PrivateRoute
+          component={Playlist}
+          path="/playlist"
+          page="true"
+          comp={<Playlist parentToChild={parentToChild} />}
+          src={song}
+        />
+        <PrivateRoute
+          path="/search"
+          component={Search}
+          page="true"
+          comp={<Search childToParent={parentToChild} />}
+          src={song}
+        />
+        <PrivateRoute
+          path="/browse"
+          component={Browse}
+          page="true"
+          comp={<Browse childToParent={parentToChild} />}
+          src={song}
+        />
+        <Route path="*" component={Error} />
+      </Switch>
     </div>
   );
 }

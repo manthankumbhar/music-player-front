@@ -3,31 +3,36 @@ import { Route } from "react-router";
 import Home from "../components/Home/Home";
 import Error from "../UI/Error/Error";
 import MainAuth from "./Auth";
+import HocPlayer from "./HocPlayer/HocPlayer";
 
 const PrivateRoute = ({
   component: Component,
   page: Page,
   comp: Comp,
+  src: Src,
   ...rest
-}) => (
-  <Route
-    {...rest}
-    render={(props) =>
-      MainAuth.isAuth ? (
-        <Component {...props} />
-      ) : localStorage.accessTokenSecret ? (
-        localStorage.getItem("accessTokenSecret") && Page === "true" ? (
-          { ...Comp }
-        ) : (
-          <Home />
-        )
-      ) : (
-        <p style={{ fontSize: "3.5rem", fontWeight: "900" }}>
-          <Error />
-        </p>
-      )
-    }
-  />
-);
+}) => {
+  return (
+    <div>
+      <Route
+        {...rest}
+        render={(props) =>
+          MainAuth.isAuth ? (
+            <Component {...props} />
+          ) : localStorage.accessTokenSecret ? (
+            localStorage.getItem("accessTokenSecret") && Page === "true" ? (
+              { ...Comp }
+            ) : (
+              <Home />
+            )
+          ) : (
+            <Error />
+          )
+        }
+      />
+      {localStorage.accessTokenSecret ? <HocPlayer src={Src} /> : null}
+    </div>
+  );
+};
 
 export default PrivateRoute;
