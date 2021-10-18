@@ -55,7 +55,7 @@ export default function Home() {
           />
           <HocLink
             src="https://picsum.photos/209"
-            link="/playlist/hindi-songs"
+            link="/playlist/bollywood-songs"
             title="Hindi Songs"
           />
         </div>

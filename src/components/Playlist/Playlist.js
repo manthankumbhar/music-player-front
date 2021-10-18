@@ -53,7 +53,7 @@ const Playlist = ({ parentToChild }) => {
           childToParent={childToParent}
         />
         <HeadPlaylist
-          header="hindi-songs"
+          header="bollywood-songs"
           src="https://picsum.photos/308"
           childToParent={childToParent}
         />

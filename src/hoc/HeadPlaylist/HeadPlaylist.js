@@ -278,7 +278,7 @@ function HeadPlaylist({ childToParent, header, src }) {
             }}
           />
           <HocPlaylist
-            header="hindi-songs"
+            header="bollywood-songs"
             name="Bheegi si Bhaagi si"
             src="https://picsum.photos/288"
             duration="4:17"
@@ -288,7 +288,7 @@ function HeadPlaylist({ childToParent, header, src }) {
             }}
           />
           <HocPlaylist
-            header="hindi-songs"
+            header="bollywood-songs"
             name="Ijazat"
             src="https://picsum.photos/289"
             duration="4:41"
@@ -298,7 +298,7 @@ function HeadPlaylist({ childToParent, header, src }) {
             }}
           />
           <HocPlaylist
-            header="hindi-songs"
+            header="bollywood-songs"
             name="Ek main aur Ekk tu"
             src="https://picsum.photos/290"
             duration="4:38"
