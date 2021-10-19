@@ -18,7 +18,6 @@ const Playlist = ({ parentToChild, songName }) => {
   };
 
   const sendSongName = (childData) => {
-    console.log(childData);
     songName(childData);
   };
 

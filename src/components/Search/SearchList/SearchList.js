@@ -9,6 +9,7 @@ const SearchList = ({ filteredSongs, songCall, songName }) => {
         name={song.name}
         src={song.src}
         duration={song.duration}
+        key={song.id}
         onClick={(e) => {
           e.preventDefault();
           songCall(song.id);

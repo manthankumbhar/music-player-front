@@ -6,13 +6,7 @@ import "./HocPlayer.scss";
 function HocPlayer(props) {
   return (
     <div className="hocplayer">
-      <AudioPlayer
-        autoPlay
-        src={props.src}
-        className="hocplayer__player"
-        onPlay={() => console.log("playing")}
-        onPause={() => console.log("pause")}
-      />
+      <AudioPlayer autoPlay src={props.src} className="hocplayer__player" />
       <h1 className="hocplayer__header">
         Playing:{" "}
         {props.songName === "" || props.songName === undefined

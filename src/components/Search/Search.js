@@ -50,7 +50,6 @@ const Search = ({ childToParent, songName }) => {
   }
 
   const sendSongName = (childData) => {
-    console.log(childData);
     songName(childData);
   };
 

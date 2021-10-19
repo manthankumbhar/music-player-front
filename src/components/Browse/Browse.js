@@ -42,11 +42,6 @@ const Browse = ({ childToParent, songName }) => {
       });
   }
 
-  // const sendSongName = (childData) => {
-  //   console.log(childData);
-  //   songName(childData);
-  // };
-
   return (
     <div className="browse">
       <Sidebar />

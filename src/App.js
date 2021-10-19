@@ -20,7 +20,6 @@ function App() {
   };
 
   const sendSongName = (childData) => {
-    console.log(childData);
     updateSongName(childData);
   };
 
