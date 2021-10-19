@@ -10,6 +10,7 @@ const PrivateRoute = ({
   page: Page,
   comp: Comp,
   src: Src,
+  songName: SongName,
   ...rest
 }) => {
   return (
@@ -30,7 +31,9 @@ const PrivateRoute = ({
           )
         }
       />
-      {localStorage.accessTokenSecret ? <HocPlayer src={Src} /> : null}
+      {localStorage.accessTokenSecret ? (
+        <HocPlayer src={Src} songName={SongName} />
+      ) : null}
     </div>
   );
 };

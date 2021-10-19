@@ -12,9 +12,14 @@ import p7 from "../../Photos/albums/ye-jawaani-hai-deewani.jpg";
 import p8 from "../../Photos/albums/charlie-puth.jpg";
 import p9 from "../../Photos/albums/bollywood-songs.jpeg";
 
-const Playlist = ({ parentToChild }) => {
+const Playlist = ({ parentToChild, songName }) => {
   const childToParent = (childData) => {
     parentToChild(childData);
+  };
+
+  const sendSongName = (childData) => {
+    console.log(childData);
+    songName(childData);
   };
 
   return (
@@ -25,38 +30,55 @@ const Playlist = ({ parentToChild }) => {
           header="linkin-park"
           src={p1}
           childToParent={childToParent}
+          songName={sendSongName}
         />
         <HeadPlaylist
           header="chainsmokers"
           src={p2}
           childToParent={childToParent}
+          songName={sendSongName}
         />
         <HeadPlaylist
           header="hoobastank"
           src={p3}
           childToParent={childToParent}
+          songName={sendSongName}
         />
         <HeadPlaylist
           header="one-direction"
           src={p4}
           childToParent={childToParent}
+          songName={sendSongName}
         />
-        <HeadPlaylist header="ac-dc" src={p5} childToParent={childToParent} />
-        <HeadPlaylist header="avicii" src={p6} childToParent={childToParent} />
+        <HeadPlaylist
+          header="ac-dc"
+          src={p5}
+          childToParent={childToParent}
+          songName={sendSongName}
+        />
+        <HeadPlaylist
+          header="avicii"
+          src={p6}
+          childToParent={childToParent}
+          songName={sendSongName}
+        />
         <HeadPlaylist
           header="ye-jawani-hai-deewani"
           src={p7}
           childToParent={childToParent}
+          songName={sendSongName}
         />
         <HeadPlaylist
           header="charlie-puth"
           src={p8}
           childToParent={childToParent}
+          songName={sendSongName}
         />
         <HeadPlaylist
           header="bollywood-songs"
           src={p9}
           childToParent={childToParent}
+          songName={sendSongName}
         />
       </div>
     </div>

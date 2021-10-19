@@ -7,6 +7,17 @@
     height: 12vh;
     background-color: rgba(0, 0, 0, 0.932);
   }
+
+  &__header {
+    position: absolute;
+    bottom: 0;
+
+    color: #fff;
+    font-size: 1.5rem;
+    font-weight: 300;
+
+    margin: 1rem;
+  }
 }
 
 .rhap_time {

@@ -32,7 +32,7 @@ import p26 from "../../Photos/songs/bheegi-si-bhaagi-si.jpg";
 import p27 from "../../Photos/songs/ijazat.jpg";
 import p28 from "../../Photos/songs/ek-main-aur-ek-tu.jpg";
 
-const Browse = ({ childToParent }) => {
+const Browse = ({ childToParent, songName }) => {
   function SongCall(id) {
     axios
       .post(`https://monty-music-player.herokuapp.com/songs/${id}`)
@@ -41,6 +41,12 @@ const Browse = ({ childToParent }) => {
         childToParent(url);
       });
   }
+
+  // const sendSongName = (childData) => {
+  //   console.log(childData);
+  //   songName(childData);
+  // };
+
   return (
     <div className="browse">
       <Sidebar />
@@ -55,6 +61,7 @@ const Browse = ({ childToParent }) => {
             onClick={(e) => {
               e.preventDefault();
               SongCall("b802798e38c9afe0eccee62a3c79e914");
+              songName("Back in black");
             }}
           />
           <HocPlaylist
@@ -65,6 +72,7 @@ const Browse = ({ childToParent }) => {
             onClick={(e) => {
               e.preventDefault();
               SongCall("f672bb170c8b6cdd702c6e2252d6cff7");
+              songName("Balam pichkari");
             }}
           />
           <HocPlaylist
@@ -75,6 +83,7 @@ const Browse = ({ childToParent }) => {
             onClick={(e) => {
               e.preventDefault();
               SongCall("59c7c3289ca8c19ffb7e119527336290");
+              songName("Best song ever");
             }}
           />
           <HocPlaylist
@@ -85,6 +94,7 @@ const Browse = ({ childToParent }) => {
             onClick={(e) => {
               e.preventDefault();
               SongCall("390caeea05abbe714dceef44fcb90f31");
+              songName("Bheegi si bhaagi si");
             }}
           />
           <HocPlaylist
@@ -95,6 +105,7 @@ const Browse = ({ childToParent }) => {
             onClick={(e) => {
               e.preventDefault();
               SongCall("dac1eff31187a680f2522f59a2a56891");
+              songName("Call you mine");
             }}
           />
           <HocPlaylist
@@ -105,6 +116,7 @@ const Browse = ({ childToParent }) => {
             onClick={(e) => {
               e.preventDefault();
               SongCall("f9b385f8f55d4e71f5c87bca5dd7398c");
+              songName("Castle of glass");
             }}
           />
           <HocPlaylist
@@ -115,6 +127,7 @@ const Browse = ({ childToParent }) => {
             onClick={(e) => {
               e.preventDefault();
               SongCall("1c07ee053ce28b9f39eefeee63acf1b9");
+              songName("Closer");
             }}
           />
           <HocPlaylist
@@ -125,6 +138,7 @@ const Browse = ({ childToParent }) => {
             onClick={(e) => {
               e.preventDefault();
               SongCall("7ff0a2c1dac39b69e878ec7984d11977");
+              songName("Don't let me down");
             }}
           />
           <HocPlaylist
@@ -135,6 +149,7 @@ const Browse = ({ childToParent }) => {
             onClick={(e) => {
               e.preventDefault();
               SongCall("8b4eb1feedefe8ee092417bc59b47fa2");
+              songName("Ek main aur ekk tu");
             }}
           />
           <HocPlaylist
@@ -145,6 +160,7 @@ const Browse = ({ childToParent }) => {
             onClick={(e) => {
               e.preventDefault();
               SongCall("7c3d655226638a58e6ccc75f72688143");
+              songName("Highway to hell");
             }}
           />
           <HocPlaylist
@@ -155,6 +171,7 @@ const Browse = ({ childToParent }) => {
             onClick={(e) => {
               e.preventDefault();
               SongCall("d952cb820f8ab07496deff25f5560e1d");
+              songName("Ijazat");
             }}
           />
           <HocPlaylist
@@ -165,6 +182,7 @@ const Browse = ({ childToParent }) => {
             onClick={(e) => {
               e.preventDefault();
               SongCall("61d65ea52fa8149b829acadf232b6694");
+              songName("Ilahi");
             }}
           />
           <HocPlaylist
@@ -175,6 +193,7 @@ const Browse = ({ childToParent }) => {
             onClick={(e) => {
               e.preventDefault();
               SongCall("96314db77c240acc52079281e773d788");
+              songName("In the end");
             }}
           />
           <HocPlaylist
@@ -185,6 +204,7 @@ const Browse = ({ childToParent }) => {
             onClick={(e) => {
               e.preventDefault();
               SongCall("e17e5bc210e53898155e49da29c480a6");
+              songName("Kabira");
             }}
           />
           <HocPlaylist
@@ -195,6 +215,7 @@ const Browse = ({ childToParent }) => {
             onClick={(e) => {
               e.preventDefault();
               SongCall("80ef92a58fdedb17711a8bb3315a532f");
+              songName("Night changes");
             }}
           />
           <HocPlaylist
@@ -205,6 +226,7 @@ const Browse = ({ childToParent }) => {
             onClick={(e) => {
               e.preventDefault();
               SongCall("8af4773cffeae963b965f6768b94bc8e");
+              songName("One call away");
             }}
           />
           <HocPlaylist
@@ -215,6 +237,7 @@ const Browse = ({ childToParent }) => {
             onClick={(e) => {
               e.preventDefault();
               SongCall("3baf39c75b2efc0a02535124993752c8");
+              songName("One more light");
             }}
           />
           <HocPlaylist
@@ -225,6 +248,7 @@ const Browse = ({ childToParent }) => {
             onClick={(e) => {
               e.preventDefault();
               SongCall("4fdaa955993905d883d3f6b288163c76");
+              songName("Out of control");
             }}
           />
           <HocPlaylist
@@ -235,6 +259,7 @@ const Browse = ({ childToParent }) => {
             onClick={(e) => {
               e.preventDefault();
               SongCall("f1567d96234140801cf282caa5804bb1");
+              songName("Same direction");
             }}
           />
           <HocPlaylist
@@ -245,6 +270,7 @@ const Browse = ({ childToParent }) => {
             onClick={(e) => {
               e.preventDefault();
               SongCall("b0039be99dd884f9f7fec9c8124ae3ae");
+              songName("See you again");
             }}
           />
           <HocPlaylist
@@ -255,6 +281,7 @@ const Browse = ({ childToParent }) => {
             onClick={(e) => {
               e.preventDefault();
               SongCall("a7a50797ea25543fc867a1675fa85116");
+              songName("The nights");
             }}
           />
           <HocPlaylist
@@ -265,6 +292,7 @@ const Browse = ({ childToParent }) => {
             onClick={(e) => {
               e.preventDefault();
               SongCall("68a1fa9fc6f2b189008e5673f1974cf7");
+              songName("The reason");
             }}
           />
           <HocPlaylist
@@ -275,6 +303,7 @@ const Browse = ({ childToParent }) => {
             onClick={(e) => {
               e.preventDefault();
               SongCall("aeeff70bd592a87d6c32061a754cb1dc");
+              songName("Thunderstruck");
             }}
           />
           <HocPlaylist
@@ -285,6 +314,7 @@ const Browse = ({ childToParent }) => {
             onClick={(e) => {
               e.preventDefault();
               SongCall("393bfe187ffae1e65bebbcdafb94ec1e");
+              songName("Waiting for love");
             }}
           />
           <HocPlaylist
@@ -295,6 +325,7 @@ const Browse = ({ childToParent }) => {
             onClick={(e) => {
               e.preventDefault();
               SongCall("f1607aceab1bf909ae8ec6d92e055f6f");
+              songName("Wake me up");
             }}
           />
           <HocPlaylist
@@ -305,6 +336,7 @@ const Browse = ({ childToParent }) => {
             onClick={(e) => {
               e.preventDefault();
               SongCall("40a074a6ae84d38326297747c142ffe2");
+              songName("We don't talk anymore");
             }}
           />
           <HocPlaylist
@@ -315,6 +347,7 @@ const Browse = ({ childToParent }) => {
             onClick={(e) => {
               e.preventDefault();
               SongCall("021fe2ed1239b0ac610c79350d9a0153");
+              songName("What I've done");
             }}
           />
           <HocPlaylist
@@ -325,6 +358,7 @@ const Browse = ({ childToParent }) => {
             onClick={(e) => {
               e.preventDefault();
               SongCall("71c5da86bbff082ba449f24cc007a9e6");
+              songName("What makes you beautiful");
             }}
           />
         </div>

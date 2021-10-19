@@ -13,9 +13,15 @@ import Browse from "./components/Browse/Browse";
 
 function App() {
   const [song, updateSong] = useState("");
+  const [songName, updateSongName] = useState("");
 
   const parentToChild = (childData) => {
     updateSong(childData);
+  };
+
+  const sendSongName = (childData) => {
+    console.log(childData);
+    updateSongName(childData);
   };
 
   return (
@@ -29,22 +35,31 @@ function App() {
           component={Playlist}
           path="/playlist"
           page="true"
-          comp={<Playlist parentToChild={parentToChild} />}
+          comp={
+            <Playlist parentToChild={parentToChild} songName={sendSongName} />
+          }
           src={song}
+          songName={songName}
         />
         <PrivateRoute
           path="/search"
           component={Search}
           page="true"
-          comp={<Search childToParent={parentToChild} />}
+          comp={
+            <Search childToParent={parentToChild} songName={sendSongName} />
+          }
           src={song}
+          songName={songName}
         />
         <PrivateRoute
           path="/browse"
           component={Browse}
           page="true"
-          comp={<Browse childToParent={parentToChild} />}
+          comp={
+            <Browse childToParent={parentToChild} songName={sendSongName} />
+          }
           src={song}
+          songName={songName}
         />
         <Route path="*" component={Error} />
       </Switch>

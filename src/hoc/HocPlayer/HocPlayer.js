@@ -13,7 +13,12 @@ function HocPlayer(props) {
         onPlay={() => console.log("playing")}
         onPause={() => console.log("pause")}
       />
-      ;
+      <h1 className="hocplayer__header">
+        Playing:{" "}
+        {props.songName === "" || props.songName === undefined
+          ? "None"
+          : props.songName}
+      </h1>
     </div>
   );
 }

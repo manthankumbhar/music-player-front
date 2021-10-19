@@ -1,7 +1,7 @@
 import React from "react";
 import HocPlaylist from "../../../hoc/HocPlaylist/HocPlaylist";
 
-const SearchList = ({ filteredSongs, songCall }) => {
+const SearchList = ({ filteredSongs, songCall, songName }) => {
   const filtered = filteredSongs.map((song) => {
     return (
       <HocPlaylist
@@ -12,6 +12,7 @@ const SearchList = ({ filteredSongs, songCall }) => {
         onClick={(e) => {
           e.preventDefault();
           songCall(song.id);
+          songName(song.name);
         }}
       />
     );

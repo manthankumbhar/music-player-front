@@ -33,7 +33,7 @@ import p26 from "../../Photos/songs/bheegi-si-bhaagi-si.jpg";
 import p27 from "../../Photos/songs/ijazat.jpg";
 import p28 from "../../Photos/songs/ek-main-aur-ek-tu.jpg";
 
-const Search = ({ childToParent }) => {
+const Search = ({ childToParent, songName }) => {
   const [searchTerm, setSearchTerm] = useState("");
 
   const updatedSearch = (term) => {
@@ -48,6 +48,11 @@ const Search = ({ childToParent }) => {
         childToParent(url);
       });
   }
+
+  const sendSongName = (childData) => {
+    console.log(childData);
+    songName(childData);
+  };
 
   const songList = [
     {
@@ -225,7 +230,13 @@ const Search = ({ childToParent }) => {
   });
 
   function searchResults() {
-    return <SearchList filteredSongs={filteredSongs} songCall={SongCall} />;
+    return (
+      <SearchList
+        filteredSongs={filteredSongs}
+        songCall={SongCall}
+        songName={sendSongName}
+      />
+    );
   }
 
   return (
