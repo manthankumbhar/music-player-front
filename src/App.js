@@ -29,7 +29,13 @@ function App() {
         <Route exact path="/" component={SignIn} />
         <Route path="/signup" component={SignUp} />
         <Route path="/forgetpassword" component={ForgetPassword} />
-        <PrivateRoute path="/home" page="false" component={Home} src={song} />
+        <PrivateRoute
+          path="/home"
+          page="false"
+          component={Home}
+          src={song}
+          songName={songName}
+        />
         <PrivateRoute
           component={Playlist}
           path="/playlist"
