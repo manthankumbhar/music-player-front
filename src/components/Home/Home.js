@@ -18,21 +18,21 @@ export default function Home() {
       <Sidebar />
       <div className="home__content">
         <HocLink src={p1} link="/playlist/linkin-park" title="Linkin Park" />
+        <HocLink src={p2} link="/playlist/chainsmokers" title="Chainsmokers" />
+        <HocLink src={p3} link="/playlist/hoobastank" title="Hoobastank" />
         <HocLink
           src={p4}
           link="/playlist/one-direction"
           title="One Direction"
         />
+        <HocLink src={p5} link="/playlist/ac-dc" title="AC/DC" />
+        <HocLink src={p6} link="/playlist/avicii" title="Avicii" />
         <HocLink
           src={p7}
           link="/playlist/ye-jawani-hai-deewani"
           title="Ye Jawani Hai Deewani"
         />
-        <HocLink src={p2} link="/playlist/chainsmokers" title="Chainsmokers" />
-        <HocLink src={p5} link="/playlist/ac-dc" title="AC/DC" />
         <HocLink src={p8} link="/playlist/charlie-puth" title="Charlie Puth" />
-        <HocLink src={p3} link="/playlist/hoobastank" title="Hoobastank" />
-        <HocLink src={p6} link="/playlist/avicii" title="Avicii" />
         <HocLink
           src={p9}
           link="/playlist/bollywood-songs"
