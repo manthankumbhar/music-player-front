@@ -17,41 +17,27 @@ export default function Home() {
     <div className="home">
       <Sidebar />
       <div className="home__content">
-        <div className="home__content--item">
-          <HocLink src={p1} link="/playlist/linkin-park" title="Linkin Park" />
-          <HocLink
-            src={p4}
-            link="/playlist/one-direction"
-            title="One Direction"
-          />
-          <HocLink
-            src={p7}
-            link="/playlist/ye-jawani-hai-deewani"
-            title="Ye Jawani Hai Deewani"
-          />
-        </div>
-        <div className="home__content--item">
-          <HocLink
-            src={p2}
-            link="/playlist/chainsmokers"
-            title="Chainsmokers"
-          />
-          <HocLink src={p5} link="/playlist/ac-dc" title="AC/DC" />
-          <HocLink
-            src={p8}
-            link="/playlist/charlie-puth"
-            title="Charlie Puth"
-          />
-        </div>
-        <div className="home__content--item">
-          <HocLink src={p3} link="/playlist/hoobastank" title="Hoobastank" />
-          <HocLink src={p6} link="/playlist/avicii" title="Avicii" />
-          <HocLink
-            src={p9}
-            link="/playlist/bollywood-songs"
-            title="Hindi Songs"
-          />
-        </div>
+        <HocLink src={p1} link="/playlist/linkin-park" title="Linkin Park" />
+        <HocLink
+          src={p4}
+          link="/playlist/one-direction"
+          title="One Direction"
+        />
+        <HocLink
+          src={p7}
+          link="/playlist/ye-jawani-hai-deewani"
+          title="Ye Jawani Hai Deewani"
+        />
+        <HocLink src={p2} link="/playlist/chainsmokers" title="Chainsmokers" />
+        <HocLink src={p5} link="/playlist/ac-dc" title="AC/DC" />
+        <HocLink src={p8} link="/playlist/charlie-puth" title="Charlie Puth" />
+        <HocLink src={p3} link="/playlist/hoobastank" title="Hoobastank" />
+        <HocLink src={p6} link="/playlist/avicii" title="Avicii" />
+        <HocLink
+          src={p9}
+          link="/playlist/bollywood-songs"
+          title="Hindi Songs"
+        />
       </div>
     </div>
   );
