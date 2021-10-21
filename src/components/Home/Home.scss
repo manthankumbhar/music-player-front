@@ -13,3 +13,10 @@
     justify-items: center;
   }
 }
+
+@media only screen and (max-width: 750px) {
+  .home {
+    flex-direction: column;
+    height: 82vh;
+  }
+}

@@ -1,15 +1,14 @@
 .search {
-  height: 100vh;
+  height: 88vh;
   display: flex;
 
   &__content {
     background-color: darkslategray;
-    height: 88vh;
+    flex: 1;
 
     display: flex;
     flex-direction: column;
     overflow-y: auto;
-    flex: 1;
   }
 
   &__header {
@@ -74,5 +73,29 @@
 
   .search-input > input:focus {
     outline: none;
+  }
+}
+
+@media only screen and (max-width: 750px) {
+  .search {
+    height: 82vh;
+    flex-direction: column;
+  }
+}
+
+@media only screen and (max-width: 650px) {
+  .search {
+    &__header {
+      flex-direction: column;
+
+      &--h1 {
+        width: 100vw;
+        text-align: center;
+      }
+    }
+
+    .search-input > input {
+      width: 70vw;
+    }
   }
 }
