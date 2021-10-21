@@ -1,0 +1,45 @@
+.App {
+  text-align: center;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-family: "Lato", sans-serif;
+  font-weight: 400;
+  /* font-size: 16px; */
+  /* padding: 2rem; */
+  overflow-y: hidden;
+}
+
+@media only screen and (max-width: 1100px) {
+  html {
+    font-size: 58.5%;
+  }
+}
+
+@media only screen and (max-width: 950px) {
+  html {
+    font-size: 54.5%;
+  }
+}
+
+@media only screen and (max-width: 800px) {
+  html {
+    font-size: 50.5%;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  html {
+    font-size: 46.5%;
+  }
+}
+
+@media only screen and (max-width: 400px) {
+  html {
+    font-size: 42.5%;
+  }
+}

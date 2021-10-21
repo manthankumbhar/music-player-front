@@ -1,0 +1,40 @@
+.hocplayer {
+  &__player {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100vw;
+    height: 12vh;
+    background-color: rgba(0, 0, 0, 0.932);
+  }
+
+  &__header {
+    position: fixed;
+
+    color: #fff;
+    font-size: 1.5rem;
+    font-weight: 300;
+  }
+}
+
+.rhap_time {
+  color: #fff;
+}
+
+.rhap_repeat-button {
+  visibility: hidden;
+  opacity: 0;
+}
+
+.rhap_main-controls-button {
+  &:hover {
+    color: #fff;
+  }
+}
+
+@media only screen and (max-width: 550px) {
+  .rhap_volume-controls {
+    display: none;
+    opacity: 0;
+  }
+}

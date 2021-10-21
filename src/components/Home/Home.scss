@@ -1,0 +1,22 @@
+.home {
+  display: flex;
+  height: 88vh;
+
+  &__content {
+    background-color: darkslategray;
+    overflow-y: auto;
+
+    flex: 1;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
+    gap: 1rem 3rem;
+    justify-items: center;
+  }
+}
+
+@media only screen and (max-width: 750px) {
+  .home {
+    flex-direction: column;
+    height: 82vh;
+  }
+}
