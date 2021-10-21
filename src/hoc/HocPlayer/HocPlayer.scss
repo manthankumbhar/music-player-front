@@ -9,9 +9,7 @@
   }
 
   &__header {
-    position: absolute;
-    bottom: 2%;
-    left: 1.5rem;
+    position: fixed;
 
     color: #fff;
     font-size: 1.5rem;
@@ -31,5 +29,12 @@
 .rhap_main-controls-button {
   &:hover {
     color: #fff;
+  }
+}
+
+@media only screen and (max-width: 550px) {
+  .rhap_volume-controls {
+    display: none;
+    opacity: 0;
   }
 }
