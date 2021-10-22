@@ -57,3 +57,11 @@
     position: absolute;
   }
 }
+
+@media only screen and (max-width: 575px) {
+  .form-signin {
+    &__btn {
+      width: 90vw;
+    }
+  }
+}
