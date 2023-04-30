@@ -34,7 +34,7 @@ class ForgetPassword extends Component {
     this.setState({ loading: true });
     axios
       .post(
-        "https://monty-music-player.herokuapp.com/forget_password_trigger",
+        "https://music-player-back-production.up.railway.app/forget_password_trigger",
         {
           phone: this.state.number,
         }
@@ -55,10 +55,13 @@ class ForgetPassword extends Component {
     e.preventDefault();
     this.setState({ loading: true });
     axios
-      .post("https://monty-music-player.herokuapp.com/forget_password_verify", {
-        phone: this.state.number,
-        code: this.state.otp,
-      })
+      .post(
+        "https://music-player-back-production.up.railway.app/forget_password_verify",
+        {
+          phone: this.state.number,
+          code: this.state.otp,
+        }
+      )
       .then((res) => {
         if (res.data.valid === true) {
           this.setState({ loading: false });
@@ -74,10 +77,13 @@ class ForgetPassword extends Component {
     e.preventDefault();
     this.setState({ loading: true });
     axios
-      .post("https://monty-music-player.herokuapp.com/reset_password", {
-        email: this.state.email,
-        password: this.state.newPassword,
-      })
+      .post(
+        "https://music-player-back-production.up.railway.app/reset_password",
+        {
+          email: this.state.email,
+          password: this.state.newPassword,
+        }
+      )
       .then((res) => {
         if (res.status === 200) {
           this.setState({ loading: false });

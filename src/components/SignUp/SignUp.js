@@ -27,7 +27,7 @@ class SignUp extends Component {
     e.preventDefault();
     this.setState({ loading: true });
     axios
-      .post("https://monty-music-player.herokuapp.com/user_signup", {
+      .post("https://music-player-back-production.up.railway.app/user_signup", {
         email: this.state.email,
         password: this.state.password,
       })

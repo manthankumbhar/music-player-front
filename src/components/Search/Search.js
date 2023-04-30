@@ -42,7 +42,7 @@ const Search = ({ childToParent, songName }) => {
 
   function SongCall(id) {
     axios
-      .post(`https://monty-music-player.herokuapp.com/songs/${id}`)
+      .post(`https://music-player-back-production.up.railway.app/songs/${id}`)
       .then((res) => {
         var url = res.data["success"];
         childToParent(url);

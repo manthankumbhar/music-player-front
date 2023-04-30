@@ -34,7 +34,7 @@ import p28 from "../../Photos/songs/ek-main-aur-ek-tu.jpg";
 function HeadPlaylist({ childToParent, songName, header, src }) {
   function SongCall(id) {
     axios
-      .post(`https://monty-music-player.herokuapp.com/songs/${id}`)
+      .post(`https://music-player-back-production.up.railway.app/songs/${id}`)
       .then((res) => {
         var url = res.data["success"];
         childToParent(url);
